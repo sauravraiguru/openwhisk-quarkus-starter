@@ -33,7 +33,7 @@ $ curl --request POST \
   --data '{"value":{"name":"Niklas"}}'
 ```
 
-**Develop the function locally**
+**Develop the function locally [Optional]**
 
 In order to change the implementation of the sample function, use your favorite Java IDE or text editor. When you run the following command, the application will be updated automatically every time you save a file:
 
@@ -43,7 +43,11 @@ $ mvn compile quarkus:dev
 
 **Get an IBM Cloud account**
 
-In order to run the function on IBM Cloud Functions, you need a free [IBM Cloud lite](https://ibm.biz/nheidloff) account and the ‘[ibmcloud](https://console.bluemix.net/docs/cli/index.html)‘ CLI.
+In order to run the function on IBM Cloud Functions,
+- you need a free [IBM Cloud lite](https://cloud.ibm.com/registration) account and 
+- the ‘[ibmcloud](https://console.bluemix.net/docs/cli/index.html)‘ CLI.
+
+
 
 **Create the OpenWhisk function**
 
