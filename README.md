@@ -22,7 +22,11 @@ $ mvn package -Pnative -Dnative-image.docker-build=true
 $ docker build -t sauravraiguru/quarkus .
 $ docker push sauravraiguru/quarkus1
 ```
+Note: If you want to skip building the java-based Quarkus container image, you can pull the image from here 
 
+```
+$ docker pull sauravraiguru/quarkus
+```
 **Invoke the function locally**
 
 ```
@@ -47,13 +51,13 @@ In order to run the function on IBM Cloud Functions,
 - you need a free [IBM Cloud lite](https://cloud.ibm.com/registration) account and 
 - the ‘[ibmcloud](https://console.bluemix.net/docs/cli/index.html)‘ CLI.
 - Install IBM Functions CLI:
+
 ```
 ibmcloud plugin install cloud-functions
 ```
 
 
-
-**Setting up IBM Functions**
+**Setting up IBM Cloud & Functions**
 
 ```
 $ ibmcloud login
@@ -72,9 +76,10 @@ ibmcloud target -g Default
 **Create the OpenWhisk action**
 
 Target the Function namespace:
+
 https://cloud.ibm.com/functions/learn/cli
 
-Create the function
+Create the OpenWhisk action
 ```
 $ ibmcloud fn action create echo-quarkus --docker sauravraiguru/quarkus -m 128
 ```
